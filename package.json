@@ -1,0 +1,17 @@
+{
+  "name": "pi-mbot-inf",
+  "version": "0.0.0",
+  "description": "PiMbotInf",
+  "main": "server.js",
+  "author": {
+    "name": "Brad Larson"
+  },
+  "dependencies": {
+    "dotenv": "4.0.0",
+    "express": "^4.15.4",
+    "log4js": "^2.3.3",
+    "serialport": "6.0.4",
+    "socket.io": "^1.7.2",
+    "virtual-serialport": "0.2.1"
+  }
+}
