@@ -64,9 +64,16 @@ io.on('connection', function (socket) {
 });
 
 sp = new SerialPort(portName, settings);
+
+sp.on('error', function (err) {
+    console.log('Serial port ' + portName + ' Error: ', err.message);
+})
+sp.on('open', function () {
+    console.log("Serial port connected to "+data);
+});
 var receiveString = "";
 sp.on('data', function (data) {
-    eprocess.stdout.write(data);
+    console.log(data);
 
     if (ioSocket) {
         //receiveString += data.toString();
